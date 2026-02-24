@@ -1,6 +1,6 @@
 #!/bin/bash
 
-cd $HOME/local/aws
+cd $HOME/local/AWS-Nova-Sonic
 source ./venv/bin/activate
 . ./env.sh
 
