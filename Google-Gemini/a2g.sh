@@ -1,6 +1,6 @@
 #!/bin/bash
 
-cd $HOME/local/a2g
+cd $HOME/local/Google-Gemini
 source ./venv/bin/activate
 . ./env.sh
 
