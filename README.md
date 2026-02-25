@@ -42,3 +42,21 @@ exit
 + Reboot the asterisk server
 
 ## Obtaining model API keys
+
+### Google Gemini
+Google's documentation can be found [here](https://ai.google.dev/gemini-api/docs).  Simply follow the instructions to "Create a Gemini API Key."  
+
+Model prices are pretty inexpensive.  A short conversaiton with the model only costs a few cents.
+
+### AWS Nova Sonic
+AWS's documentation can be found [here](https://docs.aws.amazon.com/bedrock/latest/userguide/getting-started.html).  You need to:
++ Create an AWS account and IAM user
++ Subscribe to "Bedrock", and request access to the Nova Sonic model
++ Assign your IAM user permissions to use Bedrock/Nova
++ Retrieve your API key
+Navigating the AWS interface can be a bit intimidating, so be patient.  Thakfully there's lots of help available either by reading the docs or asking your favorite AI assistant.  
+
+In comparison to Google Gemini, the AWS Nova Sonic model costs about twice as much for a short conversation - but 2x a few pennnies is still just a few pennies!
+
+### Serper
+You only need Serper for Nova Sonic.  You can sign up for an account on their [web page](https://serper.dev).  You start with a balance of 2500 "credits" free of charge (1 query = 1 credit).  After that you pay for credit bundles as you need them.  
