@@ -29,7 +29,7 @@ AUDIOSOCKET_ERROR = b'\xFF'
 ASTERISK_HOST = 'localhost'
 ASTERISK_PORT = 8123
 # Updated to current stable Live API model
-GEMINI_MODEL = "gemini-2.5-flash-native-audio-latest"
+GEMINI_MODEL = os.getenv("GEMINI_MODEL")
 
 ASTERISK_RATE = 8000
 GEMINI_INPUT_RATE = 16000
