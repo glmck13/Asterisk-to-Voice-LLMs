@@ -1,4 +1,4 @@
-# Asterisk-to-Live-LLMs
+# Asterisk-to-Voice-LLMs
 A collection of Python scripts to connect Asterisk to live voice AI models over an AudioSocket connection
 
 ## Background
@@ -14,8 +14,8 @@ These instructions assume the HOME directory for the “asterisk” user is set 
 + First download and install the scripts:
 ```
 cd $HOME
-git clone 'https://github.com/glmck13/Asterisk-to-Live-LLMs.git'
-mv Asterisk-to-Live-LLMs local; cd local
+git clone 'https://github.com/glmck13/Asterisk-to-Voice-LLMs.git'
+mv Asterisk-to-Voice-LLMs local; cd local
 find . -name '*.sh' -o -name '*.py' | xargs -t chmod +x
 cd AWS-Nova-Sonic
 python3 -m venv venv
