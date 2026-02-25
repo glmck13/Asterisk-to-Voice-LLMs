@@ -1,1 +1,2 @@
 export GEMINI_API_KEY=
+export GEMINI_MODEL="gemini-2.5-flash-native-audio-latest"
