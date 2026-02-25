@@ -11,7 +11,7 @@ Although the scripts can be hosted anywhere, it’s easiest to simply install an
 ## Installing the scripts
 These instructions assume the HOME directory for the “asterisk” user is set to /var/lib/asterisk.  If “asterisk” does not yet have an assigned login shell, edit /etc/passwd and set its login shell to /bin/bash. If you don’t want to assign “asterisk” a password just "sudo su – asterisk" to login.
 
-+ First download and install the scripts:
++ First download and install the scripts as "asterisk":
 ```
 cd $HOME
 git clone 'https://github.com/glmck13/Asterisk-to-Voice-LLMs.git'
