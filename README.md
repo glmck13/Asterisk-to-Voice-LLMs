@@ -1,5 +1,5 @@
 # Asterisk-to-Voice-LLMs
-A collection of Python scripts to connect Asterisk to live voice AI models over an AudioSocket connection
+A collection of Python scripts to connect Asterisk to live voice AI models using AudioSockets
 
 ## Background
 This repository contains Python scripts that enable Asterisk to place calls over its AudioSocket interface to two different live/voice AI models: Google Gemini’s “flash-native-audio” and AWS Bedrock’s Nova Sonic.  Voice models operate exclusively in the voice domain without having to translate speech-to-text (STT) then text-to-speech (TTS).  This makes for a more natural and responsive user experience.  The models are also “live” in that they can access current information beyond what they had initially been trained on by making use Retrieval-Augmented Generation (RAG) tools.  Gemini is configured to use Google Search (no surprise!), while Nova Sonic is configured to use [Serper](https://serper.dev/).
