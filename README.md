@@ -9,7 +9,7 @@ Although the scripts can be hosted anywhere, it’s easiest to simply install an
 + Vultr cloud server, Debian 12, Asterisk 22.5.2, FreePBX 17.0.28, (Python3.13 compiled separately to run AWS API)
 
 ## Installing the scripts
-These instructions assume the HOME directory for the “asterisk” user is set to /var/lib/asterisk.  If “asterisk” does not yet have an assigned login shell, edit /etc/passwd and set its login shell to /bin/bash. If you don’t want to assign “asterisk” a password: just sudo su – asterisk to login.
+These instructions assume the HOME directory for the “asterisk” user is set to /var/lib/asterisk.  If “asterisk” does not yet have an assigned login shell, edit /etc/passwd and set its login shell to /bin/bash. If you don’t want to assign “asterisk” a password just "sudo su – asterisk" to login.
 
 + First download and install the scripts:
 ```
