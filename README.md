@@ -54,6 +54,7 @@ AWS's documentation can be found [here](https://docs.aws.amazon.com/bedrock/late
 + Subscribe to "Bedrock", and request access to the Nova Sonic model
 + Assign your IAM user permissions to use Bedrock/Nova
 + Retrieve your API key
+
 Navigating the AWS interface can be a bit intimidating, so be patient.  Thakfully there's lots of help available either by reading the docs or asking your favorite AI assistant.  
 
 In comparison to Google Gemini, the AWS Nova Sonic model costs about twice as much for a short conversation - but 2x a few pennnies is still just a few pennies!
