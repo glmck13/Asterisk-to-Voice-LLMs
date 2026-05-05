@@ -23,13 +23,13 @@ find . -name '*.sh' -o -name '*.py' | xargs -t chmod +x
 cd AWS-Nova-Sonic
 python3.13 -m venv venv
 bash --rcfile ./venv/bin/activate -i
-pip3 install -r requirements.txt –force-reinstall
+pip3 install -r requirements.txt --force-reinstall
 exit
 cd ..
 cd Google-Gemini
 python3 -m venv venv
 bash --rcfile ./venv/bin/activate -i
-pip3 install -r requirements.txt –force-reinstall
+pip3 install -r requirements.txt --force-reinstall
 exit
 ```
 
