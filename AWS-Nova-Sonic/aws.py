@@ -11,10 +11,11 @@ import sys
 import datetime
 import httpx
 import math
-from aws_sdk_bedrock_runtime.client import BedrockRuntimeClient, InvokeModelWithBidirectionalStreamOperationInput
+from aws_sdk_bedrock_runtime.client import AsyncBedrockRuntimeClient, InvokeModelWithBidirectionalStreamOperationInput
 from aws_sdk_bedrock_runtime.models import InvokeModelWithBidirectionalStreamInputChunk, BidirectionalInputPayloadPart
-from aws_sdk_bedrock_runtime.config import Config
+from aws_sdk_bedrock_runtime.config import AsyncBedrockRuntimeConfig
 from smithy_aws_core.identity.environment import EnvironmentCredentialsResolver
+from smithy_http.aio.crt import AWSCRTHTTPClient
 
 # --- Configuration ---
 warnings.filterwarnings("ignore")
@@ -151,8 +152,12 @@ class BedrockAudioSocketManager:
         log_msg("CONN", f"New connection from Asterisk: {addr}")
         
         try:
-            config = Config(region=self.region, aws_credentials_identity_resolver=EnvironmentCredentialsResolver())
-            self.bedrock_client = BedrockRuntimeClient(config=config)
+            config = await AsyncBedrockRuntimeConfig.resolve(
+                region=self.region, 
+                aws_credentials_identity_resolver=EnvironmentCredentialsResolver(),
+                transport=AWSCRTHTTPClient()
+            )
+            self.bedrock_client = AsyncBedrockRuntimeClient(config=config)
             self.stream_response = await self.bedrock_client.invoke_model_with_bidirectional_stream(
                 InvokeModelWithBidirectionalStreamOperationInput(model_id=self.model_id)
             )
@@ -234,7 +239,6 @@ class BedrockAudioSocketManager:
         """Clears AI response queue if user interrupts."""
         if not self.audio_output_queue.empty() or self.is_playing:
             log_msg("VOICE", "Barge-in: Interrupting AI response.")
-            # CORRECTED: get_nowait() instead of get_now_nowait()
             while not self.audio_output_queue.empty():
                 try: 
                     self.audio_output_queue.get_nowait()
